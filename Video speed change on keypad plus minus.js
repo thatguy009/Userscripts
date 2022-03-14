@@ -16,13 +16,11 @@
     try {
         console.log(`Keypress video changer loaded on: ${location.href}`);
         document.addEventListener("keypress", function (evt) {
-            const speed = (evt.keyCode == 45);
-            const normal = (evt.keyCode == 43);
-            console.log(`Pressed key: ${evt.keyCode}`);
             console.log(`Pressed key: ${evt.code}`);
-            if (normal) {
+
+            if (evt.code == "NumpadAdd") {
                 RegularSpeed();
-            } else if (speed) {
+            } else if (evt.code == "NumpadSubtract") {
                 SpeedUp();
             }
         });
@@ -50,7 +48,10 @@
     function ShowSpeedChange(vid) {
         const rect = vid.getBoundingClientRect();
         const txtID = `_speedText_${Date.parse(new Date())}${Math.random()}`;
+        const innerText = `Speed set to: x${vid.playbackRate}`;
+
         const speedText = document.createElement("p");
+
         speedText.className = txtID;
         speedText.style.fontSize = "large";
         speedText.style.color = "white";
@@ -59,16 +60,12 @@
         speedText.style.left = `${(rect.left + 20).toString()}px`;
         speedText.style.zIndex = vid.style.zIndex + 100;
         speedText.style.textShadow = "black 0px 0px 8px";
-        speedText.innerText = `Speed set to: x${vid.playbackRate}`;
+        speedText.innerText = innerText;
+
         document.body.appendChild(speedText);
 
-        setTimeout(function () {
-            const doc = document.getElementById(txtID);
-            if (doc !== null) {
-                doc.remove();
-            } else {
-                document.querySelectorAll("[id^='_speedText_']").forEach(e => e.remove());
-            }
-        }, 250);
+        console.log(`${txtID} added to page with text: ${innerText}`);
+
+        setTimeout(() => document.querySelectorAll("[class^='_speedText_']").forEach(e => e.remove()), 250);
     }
 })();
