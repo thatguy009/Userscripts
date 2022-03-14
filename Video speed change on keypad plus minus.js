@@ -14,10 +14,11 @@
     'use strict';
     try {
         console.log(`Keypress video changer loaded on: ${location.href}`);
-        const eventt = document.addEventListener("keypress", function (evt) {
+        document.addEventListener("keypress", function (evt) {
             const speed = (evt.keyCode == 45);
             const normal = (evt.keyCode == 43);
             console.log(`Pressed key: ${evt.keyCode}`);
+            console.log(`Pressed key: ${evt.code}`);
             if (normal) {
                 RegularSpeed();
             } else if (speed) {
@@ -45,12 +46,12 @@
         console.log("Set video speed to 1");
     }
 
-    //TODO: Test this on a varity of websites
+    //TODO: Test this on a variety of websites
     function ShowSpeedChange(vid) {
         const rect = vid.getBoundingClientRect();
         const txtID = `_speedText_${Date.parse(new Date())}${Math.random()}`;
         const speedText = document.createElement("p");
-        speedText.id = txtID;
+        speedText.className = txtID;
         speedText.style.fontSize = "large";
         speedText.style.color = "white";
         speedText.style.position = "fixed";
