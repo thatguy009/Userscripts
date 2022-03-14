@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Video speed, other stuff
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Shift 2 to speed up x2, Shift 1 of regular
 // @author       You
 // @match        *://*/*
 // @grant        none
+// @downloadURL  https://raw.githubusercontent.com/thatguy009/Userscripts/main/Video%20speed%20change%20on%20keypad%20plus%20minus.js
 // @updateURL    https://raw.githubusercontent.com/thatguy009/Userscripts/main/Video%20speed%20change%20on%20keypad%20plus%20minus.js
 // ==/UserScript==
 //TODO: Automate version increments commit (pre\post?)
@@ -22,7 +23,6 @@
             if (normal) {
                 RegularSpeed();
             } else if (speed) {
-                console.log("Speed up clicked");
                 SpeedUp();
             }
         });
