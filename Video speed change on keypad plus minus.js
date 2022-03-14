@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Video speed, other stuff
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Shift 2 to speed up x2, Shift 1 of regular
 // @author       You
 // @match        *://*/*
