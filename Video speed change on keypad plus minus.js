@@ -11,7 +11,7 @@
 // ==/UserScript==
 //TODO: Automate version increments commit (pre\post?)
 
-(function () {
+(() => {
   console.log(`Keypress video changer loaded on: ${location.href}`);
   document.addEventListener("keypress", (evt) => {
     if (evt.code == "NumpadAdd") {
