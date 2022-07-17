@@ -9,11 +9,6 @@
 // @grant        GM_registerMenuCommand
 // ==/UserScript==
 
-function test() {
-    alert('Hi');
-}
-
-
 if (location.hostname == "e621.net") {
     const s = location.search;
     const search = unescape(s.substring(s.indexOf('=') + 1).split('&')[0]).split('+').filter(t => t.indexOf('order:') == -1);
