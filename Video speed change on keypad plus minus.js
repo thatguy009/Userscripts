@@ -9,7 +9,6 @@
 // @downloadURL  https://raw.githubusercontent.com/thatguy009/Userscripts/main/Video%20speed%20change%20on%20keypad%20plus%20minus.js
 // @updateURL    https://raw.githubusercontent.com/thatguy009/Userscripts/main/Video%20speed%20change%20on%20keypad%20plus%20minus.js
 // ==/UserScript==
-//TODO: Automate version increments commit (pre\post?)
 
 (() => {
   console.log(`Keypress video changer loaded on: ${location.href}`);
