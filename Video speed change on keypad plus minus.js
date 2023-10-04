@@ -63,7 +63,7 @@
     speedText.style.position = "fixed";
     speedText.style.top = `${(rect.top + 20).toString()}px`;
     speedText.style.left = `${(rect.left + 20).toString()}px`;
-    speedText.style.zIndex = vid.style.zIndex + 100;
+    speedText.style.zIndex = vid.style.zIndex + 1000;
     speedText.style.textShadow = "black 0px 0px 8px";
     speedText.innerText = innerText;
 
