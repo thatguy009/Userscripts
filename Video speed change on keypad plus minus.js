@@ -35,6 +35,10 @@
     }
   }
 
+  /**
+   * Displays the current playback speed of a video and removes it after 250ms.
+   * @param {HTMLVideoElement} vid - The video element to display the speed for.
+   */
   function ShowSpeedChange(vid) {
     const rect = vid.getBoundingClientRect();
     const txtID = `_speedText_${Date.parse(new Date())}${Math.random()}`;
