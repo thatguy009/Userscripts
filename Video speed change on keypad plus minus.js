@@ -68,11 +68,10 @@
 
     console.log(`Set video ${vid.src} speed to ${vid.playbackRate}`);
 
-    setTimeout(
-      () =>
-        document
-          .querySelectorAll("[class^='_speedText_']")
-          .forEach((e) => e.remove()),
+    setTimeout(() =>
+      document
+        .querySelectorAll("[class^='_speedText_']")
+        .forEach((e) => e.remove()),
       250,
     );
   }
