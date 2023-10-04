@@ -21,6 +21,10 @@
     }
   });
 
+  /**
+   * Increases the playback speed of all video elements on the page by 0.5 or sets it to 2 if it's currently at 1.
+   * @returns {void}
+   */
   function SpeedUp() {
     for (const a of document.getElementsByTagName("video")) {
       a.playbackRate = a.playbackRate == 1 ? 2 : a.playbackRate + 0.5;
@@ -28,6 +32,12 @@
     }
   }
 
+  /**
+   * Sets the playback speed of all video elements to regular speed (1x).
+   * @function
+   * @name RegularSpeed
+   * @returns {void}
+   */
   function RegularSpeed() {
     for (const b of document.getElementsByTagName("video")) {
       b.playbackRate = 1;
