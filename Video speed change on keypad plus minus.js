@@ -13,6 +13,8 @@
 
 (() => {
   console.log(`Keypress video changer loaded on: ${location.href}`);
+
+  //Bind the speed change functions to the numpad plus and minus keys.
   document.addEventListener("keypress", (evt) => {
     if (evt.code == "NumpadAdd") {
       RegularSpeed();
