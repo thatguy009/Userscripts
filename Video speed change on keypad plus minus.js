@@ -52,12 +52,9 @@
    */
   function ShowSpeedChange(vid) {
     const rect = vid.getBoundingClientRect();
-    const txtID = `_speedText_${Date.parse(new Date())}${Math.random()}`;
-    const innerText = `Speed set to: x${vid.playbackRate}`;
-
     const speedText = document.createElement("p");
 
-    speedText.className = txtID;
+    speedText.className = `_speedText_${Date.parse(new Date())}${Math.random()}`;
     speedText.style.fontSize = "large";
     speedText.style.color = "white";
     speedText.style.position = "fixed";
@@ -65,7 +62,7 @@
     speedText.style.left = `${(rect.left + 20).toString()}px`;
     speedText.style.zIndex = vid.style.zIndex + 1000;
     speedText.style.textShadow = "black 0px 0px 8px";
-    speedText.innerText = innerText;
+    speedText.innerText = `Speed set to: x${vid.playbackRate}`;
 
     document.body.appendChild(speedText);
 
