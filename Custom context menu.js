@@ -9,6 +9,7 @@
 // @grant        GM_registerMenuCommand
 // ==/UserScript==
 
+/*
 GM_registerMenuCommand("Default menu", () => {
     alert(`Called Default menu on ${location.href}`);
     debugger;
@@ -17,6 +18,7 @@ GM_registerMenuCommand("Default menu", () => {
 ["Thing 1", "Thing 2", "Thing 3"].forEach(thing => GM_registerMenuCommand(`Alert for ${thing}`, () => {
     alert(thing);
 }));
+*/
 
 if (location.hostname == "e621.net") {
     const s = location.search;
