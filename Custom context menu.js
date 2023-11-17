@@ -20,7 +20,7 @@ GM_registerMenuCommand("Default menu", () => {
 }));
 */
 
-if (location.hostname == "e621.net") {
+if (location.hostname.includes("e621.net")) {
     const s = location.search;
     const search = unescape(s.substring(s.indexOf('=') + 1).split('&')[0]).split('+').filter(t => t.indexOf('order:') == -1);
 
